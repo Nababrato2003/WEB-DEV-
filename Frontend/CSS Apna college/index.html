@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Summership 2026 — Login</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: system-ui, -apple-system, sans-serif;
+      background: #f4f4f2;
+      color: #1a1a18;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+    }
+
+    /* ---------- Login Page ---------- */
+    .page {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+    }
+
+    .card {
+      background: #ffffff;
+      border: 0.5px solid rgba(0,0,0,0.12);
+      border-radius: 12px;
+      padding: 2.5rem 2rem;
+      width: 100%;
+      max-width: 380px;
+    }
+
+    .logo-ring {
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      background: #534AB7;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1.25rem;
+    }
+
+    .logo-ring i {
+      font-size: 24px;
+      color: #EEEDFE;
+    }
+
+    .card-title {
+      font-size: 20px;
+      font-weight: 500;
+      text-align: center;
+      margin-bottom: 4px;
+    }
+
+    .card-sub {
+      font-size: 14px;
+      color: #666;
+      text-align: center;
+      margin-bottom: 1.75rem;
+    }
+
+    .field {
+      margin-bottom: 1rem;
+    }
+
+    .field label {
+      display: block;
+      font-size: 13px;
+      font-weight: 500;
+      color: #555;
+      margin-bottom: 6px;
+    }
+
+    .field-wrap {
+      position: relative;
+    }
+
+    .field-wrap > i {
+      position: absolute;
+      left: 11px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 16px;
+      color: #aaa;
+      pointer-events: none;
+    }
+
+    .field-wrap input {
+      width: 100%;
+      height: 38px;
+      padding: 0 38px 0 36px;
+      border: 0.5px solid rgba(0,0,0,0.2);
+      border-radius: 8px;
+      font-size: 15px;
+      color: #1a1a18;
+      background: #fff;
+      outline: none;
+      transition: border-color 0.15s, box-shadow 0.15s;
+    }
+
+    .field-wrap input:focus {
+      border-color: #534AB7;
+      box-shadow: 0 0 0 3px rgba(83,74,183,0.15);
+    }
+
+    .toggle-pw {
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      background: none;
+      border: none;
+      cursor: pointer;
+      color: #aaa;
+      font-size: 16px;
+      padding: 2px;
+      display: flex;
+      align-items: center;
+    }
+
+    .toggle-pw:hover { color: #555; }
+
+    .btn-primary {
+      width: 100%;
+      margin-top: 0.5rem;
+      background: #534AB7;
+      color: #EEEDFE;
+      border: none;
+      border-radius: 8px;
+      height: 38px;
+      font-size: 15px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: opacity 0.15s, transform 0.1s;
+    }
+
+    .btn-primary:hover { opacity: 0.88; }
+    .btn-primary:active { transform: scale(0.98); }
+
+    .error-msg {
+      font-size: 13px;
+      color: #c0392b;
+      margin-top: 0.5rem;
+      min-height: 18px;
+    }
+
+    /* ---------- Welcome Page ---------- */
+    .welcome-page {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 300px;
+      text-align: center;
+      padding: 2rem;
+    }
+
+    .welcome-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: #EEEDFE;
+      color: #3C3489;
+      font-size: 13px;
+      padding: 4px 14px;
+      border-radius: 8px;
+      margin-bottom: 1.5rem;
+    }
+
+    .welcome-heading {
+      font-size: 28px;
+      font-weight: 500;
+      color: #1a1a18;
+      margin-bottom: 0.5rem;
+    }
+
+    .welcome-sub {
+      font-size: 15px;
+      color: #666;
+      margin-bottom: 2rem;
+    }
+
+    .btn-logout {
+      background: none;
+      border: 0.5px solid rgba(0,0,0,0.25);
+      border-radius: 8px;
+      padding: 8px 20px;
+      font-size: 14px;
+      color: #555;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: background 0.15s;
+    }
+
+    .btn-logout:hover { background: #f0f0ee; }
+
+    /* ---------- Dark Mode ---------- */
+    @media (prefers-color-scheme: dark) {
+      body { background: #1a1a18; color: #f0efe8; }
+      .card { background: #242422; border-color: rgba(255,255,255,0.1); }
+      .card-sub, .welcome-sub { color: #aaa; }
+      .field label { color: #bbb; }
+      .field-wrap input { background: #2e2e2c; border-color: rgba(255,255,255,0.15); color: #f0efe8; }
+      .field-wrap input:focus { border-color: #7F77DD; box-shadow: 0 0 0 3px rgba(127,119,221,0.2); }
+      .field-wrap > i, .toggle-pw { color: #666; }
+      .toggle-pw:hover { color: #aaa; }
+      .welcome-heading { color: #f0efe8; }
+      .btn-logout { border-color: rgba(255,255,255,0.2); color: #aaa; }
+      .btn-logout:hover { background: #2e2e2c; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Login Page -->
+  <div id="login-page" class="page">
+    <div class="card">
+      <div class="logo-ring">
+        <i class="ti ti-sun" aria-hidden="true"></i>
+      </div>
+      <p class="card-title">Sign in</p>
+      <p class="card-sub">Welcome back to Summership 2026</p>
+
+      <div class="field">
+        <label for="username">Username</label>
+        <div class="field-wrap">
+          <i class="ti ti-user" aria-hidden="true"></i>
+          <input type="text" id="username" placeholder="Enter your username" autocomplete="username" />
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="password">Password</label>
+        <div class="field-wrap">
+          <i class="ti ti-lock" aria-hidden="true"></i>
+          <input type="password" id="password" placeholder="Enter your password" autocomplete="current-password" />
+          <button class="toggle-pw" aria-label="Toggle password visibility" onclick="togglePw()">
+            <i class="ti ti-eye" id="eye-icon" aria-hidden="true"></i>
+          </button>
+        </div>
+      </div>
+
+      <p class="error-msg" id="error-msg" role="alert"></p>
+
+      <button class="btn-primary" onclick="handleLogin()">Sign in</button>
+    </div>
+  </div>
+
+  <!-- Welcome Page -->
+  <div id="welcome-page" class="welcome-page">
+    <div class="welcome-badge">
+      <i class="ti ti-sun" aria-hidden="true"></i> Summership 2026
+    </div>
+    <h1 class="welcome-heading">Welcome to Summership 2026</h1>
+    <p class="welcome-sub" id="welcome-name">You're successfully signed in.</p>
+    <button class="btn-logout" onclick="handleLogout()">
+      <i class="ti ti-logout" aria-hidden="true"></i> Sign out
+    </button>
+  </div>
+
+  <script>
+    function togglePw() {
+      const pw = document.getElementById('password');
+      const icon = document.getElementById('eye-icon');
+      if (pw.type === 'password') {
+        pw.type = 'text';
+        icon.className = 'ti ti-eye-off';
+      } else {
+        pw.type = 'password';
+        icon.className = 'ti ti-eye';
+      }
+    }
+
+    function handleLogin() {
+      const user = document.getElementById('username').value.trim();
+      const pass = document.getElementById('password').value;
+      const err = document.getElementById('error-msg');
+
+      if (!user && !pass) { err.textContent = 'Please enter your username and password.'; return; }
+      if (!user) { err.textContent = 'Username is required.'; return; }
+      if (!pass) { err.textContent = 'Password is required.'; return; }
+
+      err.textContent = '';
+      document.getElementById('welcome-name').textContent =
+        'You\'re signed in as ' + user + '. Have a great summer!';
+      document.getElementById('login-page').style.display = 'none';
+      const wp = document.getElementById('welcome-page');
+      wp.style.display = 'flex';
+    }
+
+    function handleLogout() {
+      document.getElementById('username').value = '';
+      document.getElementById('password').value = '';
+      document.getElementById('error-msg').textContent = '';
+      document.getElementById('welcome-page').style.display = 'none';
+      document.getElementById('login-page').style.display = 'flex';
+    }
+
+    document.getElementById('password').addEventListener('keydown', e => {
+      if (e.key === 'Enter') handleLogin();
+    });
+    document.getElementById('username').addEventListener('keydown', e => {
+      if (e.key === 'Enter') document.getElementById('password').focus();
+    });
+  </script>
+
+</body>
+</html>

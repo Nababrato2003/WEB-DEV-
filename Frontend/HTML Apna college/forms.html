@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action = "/action.php"> <!-- Action.php is the backend file -->
+    <input type = "text" placeholder = "User name" />
+    <input type = "password" placeholder = "Password" />
+    <!--type="text" → creates a text box
+    placeholder="User name" → shows light hint text inside the box-->
+<br>
+<br>
+
+    <label for = "101">
+    <input type = "radio" value = "class XI" name = "class"> class XI
+    </label>
+    <br>
+    <br>
+    <label for = "102">
+    <input type = "radio" value = "class XII" name = "class"> class XII
+    </label>
+    <!--type="radio" → radio button
+    value="class XI" → value sent to server
+    name="class" → group name
+    class XI → text shown to user-->
+
+
+    <!--Check box section for multiple selections-->
+    <br>
+    <h4>Fav subjects</h4>
+    <br>
+    <label for = "math">
+        <input type = "checkbox" value = "math" name = "subject" id = "101">Math 
+    </label>
+
+     <label for = "phy">
+        <input type = "checkbox" value = "phy" name = "subject" id = "102">Physics 
+    </label>
+
+     <label for = "chem">
+        <input type = "checkbox" value = "chem" name = "subject" id = "103">Chemistry 
+    </label>
+
+     <label for = "bio">
+        <input type = "checkbox" value = "bio" name = "subject" id = "104">Biology 
+    </label>
+    </label>
+    <br><br>
+    <select name = "city">
+        <option value = "delhi"> Delhi</option>
+        <option value = "noida"> Noida</option>
+        <option value = "gurgaon"> Gurgaon</option>
+        <option value = "faridabad"> Kolkata</option>
+    </select>
+<br><br>
+    <textarea name = "feedback" id = 101 placeholder = "Enter your feedback here"></textarea>
+
+</form>
+
+</body>
+</html>
