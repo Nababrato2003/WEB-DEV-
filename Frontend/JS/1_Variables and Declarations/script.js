@@ -17,5 +17,11 @@ const a = 12; //always set kora hoya galo , it cannot be changed later
 var a = 123;//global scope 
 {
     let a = 12;//block scope means it can only be used in this block
-    
+
+}
+
+function abcd(){
+    if(true){
+        let a = 12;//function scope means it can only be used in this function
+    }
 }
