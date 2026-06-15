@@ -25,3 +25,11 @@ function abcd(){
         let a = 12;//function scope --> it can only be used in this function
     }
 }
+
+//Reassignment and redecalration
+
+let  a = 12;
+a = 13; //reassignment is allowed with let but redeclaration is not allowed with let
+
+//Temporal deadzone
+
