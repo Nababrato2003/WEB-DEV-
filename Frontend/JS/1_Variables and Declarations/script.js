@@ -27,9 +27,18 @@ function abcd(){
 }
 
 //Reassignment and redecalration
-
 let  a = 12;
 a = 13; //reassignment is allowed with let but redeclaration is not allowed with let
 
-//Temporal deadzone
+//Temporal deadzone--> this means that if we try to access a variable before it is declared, it will throw an error., but it will be acknoledged by the compliler that the value of 'a' is present , kintu initialize hoya nei . In most of the programming languages, if we try to access a variable before it is declared, it will throw an error. But in JavaScript, it will not throw an error, but it will return undefined. This is because of the concept of hoisting. Mane Java script jane j a variable a ache but initialize hoya nei , tai undefined return kore .
+
+//console.log(a);
+
+//let a = 12; //error because of temporal deadzone and ai tempotal deadzone er karone a variable ke access kora jabe na jodi declare er age access kora hoy .
+
+//starting theke oi variable opdi joto ta space ache , otao temporal deadzone er modhye pore , tai oi variable ke access kora jabe na jodi declare er age access kora hoy .
+
+
+let c = 16;//upor ar faka lines gulo temporal deadzone ar moddha pore
+let a = 12;
 
