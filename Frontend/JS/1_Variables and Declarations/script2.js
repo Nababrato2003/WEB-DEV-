@@ -34,6 +34,7 @@ let a = 10;//block scope allowed //global
 console.log("Outside :", a);
 //inside ar jonno block scope ar inside ta access krche , outside block ar jonno global scope ta access korbe, so output will be 20 and 10 respectively
 
+//Question 5
 if (true) {
     var a = 1;
     let b = 2;
@@ -43,3 +44,7 @@ console.log(b);//let is block-scoped.This means b exists only inside, calling co
 
 //var--> cannnot be used outside of function 
 //let --> cannot be used outside of curly braces,i.e outside of block scope
+
+const person = {name:"Harsh"};
+person.name = "Sharma";//Allowed
+person = {}; 
