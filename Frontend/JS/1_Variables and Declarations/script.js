@@ -38,7 +38,7 @@ a = 13; //reassignment is allowed with let but redeclaration is not allowed with
 
 //starting theke oi variable opdi joto ta space ache , otao temporal deadzone er modhye pore , tai oi variable ke access kora jabe na jodi declare er age access kora hoy .
 
-
+//but ai issue ta sudhu 'let' and 'const' ar jonno hoy , 'var' ar jonno hoy nah , karon var ar jonno hoisting hoy , tai var ar jonno temporal deadzone er issue hoy nah .
 let c = 16;//upor ar faka lines gulo temporal deadzone ar moddha pore
 let a = 12;
 
