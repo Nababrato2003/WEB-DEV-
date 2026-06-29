@@ -48,3 +48,4 @@ console.log(b);//let is block-scoped.This means b exists only inside, calling co
 const person = {name:"Harsh"};
 person.name = "Sharma";//Allowed
 person = {}; 
+
