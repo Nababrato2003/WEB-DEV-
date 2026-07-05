@@ -11,15 +11,53 @@
 console.log(1 + 2); // this does numeric additin 
 console.log("Ha" + "rsh");//does concatenation 
 console.log(12 - 2);//substration only job 
-console.log(12*2); 
 console.log(12 * 2);
-console.log(12%2);
-console.log(12% 5);//remainder ta thakbe as answer in case of modulus or modulo
-console.log(2**3);
+console.log(12 * 2);
+console.log(12 % 2);
+console.log(12 % 5);//remainder ta thakbe as answer in case of modulus or modulo
+console.log(2 ** 3);
 
 //Comparision operators--> =, ==, ===,!=,!==, >=,<=,<,>,
 let a = 12//assignment operator 
 12 == 13// false
 12 == "12"// true dekhabe but duto alada alada  
+12 === "12" // false asbe , properly kaaj a ase 
+12 != 13 // true
+"harsh" != "harshita" // true
+// == --> value check , not strict comparision
+// === --> value and type both check, strict comparision 
+12 !== 12 // false
+
+
+//Assignment operators --> = += -= *= /= %= **= 
+let b = 12;
+a += 3;//same a = a+3;
+a -= 11;//same a = a-11;
+a *= 2; //same a = a*2;
+a /= 2;//same a = a/2;
+a %= 2;//same a = a%2;
+a **= 2;//same a = a**2;
+
+//Logical operators--> &&,||
+true && true = true
+true && false = false
+false && false = false
+
+true || true = true
+true || false = true
+false || false = false
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
