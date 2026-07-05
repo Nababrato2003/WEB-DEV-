@@ -16,4 +16,4 @@ console.log(y);//null
 "5"+ 1// "51" hobe , the compiler tries to number into string and then concatenate it , so the answer will be "51", this happend in JS
 "5" - 1// 4 hobe , the compiler tries to convert string into number and then subtract it , so the answer will be 4, this happend in JS 
 //If there is any other operator than +, then it tries to convert the string into number , this is what always the compiler tries to do 
-//Thus operation decide kore , that conversion ta kon side a hobe , string side a naki number side a 
+//Thus operation decide kore , that conversion ta kon side a hobe , string side a naki number side a  

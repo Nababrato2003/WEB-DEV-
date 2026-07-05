@@ -9,7 +9,7 @@
 
 
 //Truthy vs Falsy values
-//Falsy values --> 0, "", null, undefined, NaN, false, document.all
+//*Falsy values* --> 0, "", null, undefined, NaN, false, document.all
 
 
 !!0// trick to get false or true value, use excamation mark twice to get it as true or false value 
@@ -24,4 +24,11 @@ if(null){
 
 }
 // null is a falsy value ,so even if we have not written false , JS will treat this as false accoding to the nature of the value 
+
+//*Truthy values* --> "0", " ", [], {}, function(){} , true, 1, -1, Infinity, -Infinity, remaining all values are truthy values
+if(-1){
+
+}
+// -1 is a truthy value accoding to its nature , so tar jonno eta true te convert hobe and if block ar vitore ja ache seta execute hobe 
+
 
