@@ -41,11 +41,27 @@ a **= 2;//same a = a**2;
 //Logical operators--> &&,||
 true && true = true
 true && false = false
+false && true = false
 false && false = false
+
+12 > 13 && 13 > 10 //false asbe since left side is false and right side is true thus false && true = false 
 
 true || true = true
 true || false = true
 false || false = false
+
+12 > 13 || 13 > 10 // false answer asbe since left side is false and right side is true thus false || true = true, ||--> means or, mane either left side thik hobe nahole right side thaklei hobe
+// && --> means and and 
+!false // true hobe since false ar age not dawa hoyache 
+
+
+    //Unary operators--> +, -, !, typeof, ++, --
+    + "5" // converts into a number , by putting + in front of a string 
+    + "harsh" // NAN hobe, cannot be converted 
+
+
+
+
 
 
 
