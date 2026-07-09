@@ -59,6 +59,20 @@ false || false = false
     + "5" // converts into a number , by putting + in front of a string 
     + "harsh" // NAN hobe, cannot be converted 
 
+let c = 12;
+++c// this gets us 13, pre increment
+--c// this gets us 11, pre decrement
+c++// this gets us 13, post increment
+c--// this gets us 11, post decrement
+let x = 10;
+let y = ++x;// pre increment
+console.log(x);//11
+console.log(y);//11
+let p = 10;
+let q = p++; // post increment
+console.log(p);//11
+console.log(q);//10
+
 
 
 
