@@ -55,9 +55,9 @@ false || false = false
 !false // true hobe since false ar age not dawa hoyache 
 
 
-    //Unary operators--> +, -, !, typeof, ++, --
-    + "5" // converts into a number , by putting + in front of a string 
-    + "harsh" // NAN hobe, cannot be converted 
+ //Unary operators--> +, -, !, typeof, ++, --
++ "5" // converts into a number , by putting + in front of a string 
++ "harsh" // NAN hobe, cannot be converted 
 
 let c = 12;
 ++c// this gets us 13, pre increment
@@ -73,6 +73,10 @@ let q = p++; // post increment
 console.log(p);//11
 console.log(q);//10
 
+//Ternary operator --> ?:
+
+//condition ? true hole code : false howar code 
+12>13 ? console.log("true") : console.log("false") // false answer asbe 
 
 
 
