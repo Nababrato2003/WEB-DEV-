@@ -24,3 +24,18 @@ console.log(m); // m=9 asbe
 let n = 5;
 let result = n++ + ++n;
 console.log(result);//12 
+
+
+let likes = 100;
+function likePost() {
+    return ++likes;
+}
+console.log(likePost());//101 asbe and likes o 101 hobe 
+console.log(likes);//101
+
+let count = 5;
+if (count-- === 5) {
+    console.log("Matched");
+} else {
+    console.log("not matched");
+}
