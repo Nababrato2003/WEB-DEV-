@@ -6,10 +6,29 @@
 
 
 //for loop
-for(start;end;change){
-    
+for (start; end; change) {
+
 }
 
-for((let i = 0; i<10; i++)){
+for (let i = 0; i < 10; i++) {
     console.log("hello world")
 }
+
+//while loop
+let i = 1;
+while (i < 32) {
+    //code
+    console.log(i);
+    i++;
+}
+
+
+//do-while loop 
+let j = 2;
+do {
+    //code
+    console.log(j);
+    j++;
+} while (j < 10);//jodi condition false hoy then also akbar print hobe 
+
+
